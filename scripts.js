@@ -1,3 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Adicione interatividade aqui
+	const menuIcon = document.getElementById('menu-icon');
+	const menu = document.getElementById('menu');
+
+	menuIcon.addEventListener('click', function() {
+		menu.classList.toggle('open');
+	});
 });

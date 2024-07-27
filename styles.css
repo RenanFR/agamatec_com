@@ -1,95 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: black;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo img {
+	width: 200px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
+.menu-icon {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 24px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+.menu-icon .bar {
+	width: 30px;
+	height: 3px;
+	background-color: white;
+	margin: 3px 0;
 }
 
-nav ul li {
-    margin-left: 20px;
+/* Estilo do menu */
+.menu {
+	position: fixed;
+	top: 0;
+	right: -300px;
+	width: 300px;
+	height: 100%;
+	background-color: blue;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: right 0.3s ease;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.menu ul {
+	list-style: none;
+	text-align: center;
 }
 
-main {
-    padding: 20px 0;
+.menu ul li {
+	margin: 20px 0;
 }
 
-main .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.menu ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 24px;
 }
 
-section {
-    margin-bottom: 40px;
+.menu ul li a img {
+	width: 24px;
+	margin: 0 5px;
 }
 
-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.hero {
+	height: 100vh;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
-.service-item, .app-item {
-    margin-bottom: 20px;
+.hero h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+.hero-nav a {
+	margin: 10px;
+	padding: 10px 20px;
+	border: 2px solid white;
+	color: white;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
+.hero-nav a:hover {
+	background-color: white;
+	color: black;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
+.menu.open {
+	right: 0;
 }
