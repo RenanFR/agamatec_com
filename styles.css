@@ -120,18 +120,32 @@ header {
 	background: linear-gradient(45deg, #0600ff, #aa00ff);
 	color: white;
 	padding: 50px 20px;
-	text-align: left;
 }
 
 .sobre .content {
-	max-width: 800px;
+	max-width: 1200px;
 	margin: auto;
-	text-align: left;
 }
 
 .sobre h1 {
+	font-size: 48px;
 	color: white;
 	margin-bottom: 20px;
+	text-align: left;
+}
+
+.sobre .row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.sobre .row p {
+	width: 48%;
+}
+
+.sobre .full-width {
+	width: 100%;
 }
 
 .footer {
@@ -150,6 +164,27 @@ header {
 .footer-social a img {
 	width: 30px;
 	margin: 0 10px;
+}
+
+.site-footer {
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.site-footer p {
+	margin: 0;
+}
+
+.site-footer .social-links a {
+	margin: 0 10px;
+}
+
+.site-footer .social-links a img {
+	width: 20px;
 }
 
 .quem-somos {
@@ -185,6 +220,11 @@ header {
 	margin-bottom: 10px;
 }
 
+.socio p a img {
+	height: 24px;
+	width: auto;
+}
+
 .socio h3 {
 	font-size: 24px;
 	margin-bottom: 5px;
@@ -196,7 +236,7 @@ header {
 }
 
 .socio p a img {
-	width: 16px; 
+	width: 16px;
 }
 
 footer {
@@ -222,4 +262,73 @@ footer {
 
 .footer-content .social-links a {
 	margin: 0 10px;
+}
+
+.servicos {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.servicos h2 {
+	margin-bottom: 20px;
+}
+
+.servicos-content {
+	position: relative;
+	display: inline-block;
+}
+
+.servicos img {
+	width: 100%;
+	max-width: 800px;
+	height: auto;
+}
+
+.cloud-text {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+}
+
+.servicos-overlay {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+
+.servico {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	margin: 0 10px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.servico a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	z-index: 1;
+}
+
+.servico::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #ff00ff;
+	transform: skew(-20deg);
+	z-index: 0;
 }
